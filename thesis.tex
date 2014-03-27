@@ -51,8 +51,8 @@
 %Uncomment the following line if you don't want numbererd Abstract and Ack.
 %\pagenumbering{gobble}
 
-\cleardoublepage\include{FrontBackmatter/Abstract}
-\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+\cleardoublepage\include{Abstract}
+\cleardoublepage\include{Acknowledgments}
 
 % ToC, LoF, LoT, etc.
 \cleardoublepage
@@ -103,22 +103,20 @@
 \chapter{Conclusion}
 \input{Chapters/conclusion}
 
-% ********************************************************************
+%********************************************************************
 % Backmatter
 %*******************************************************
 \appendix
 \cleardoublepage
 \part{Appendix}
-%\input{challenges}
-%\input{Chapters/plugin-tutorial}
-%\input{Chapters/futureplugins}
 
 %********************************************************************
 % Other Stuff in the Back
 %*******************************************************
 \cleardoublepage\include{FrontBackmatter/Bibliography}
-%\cleardoublepage\include{FrontBackmatter/Colophon}
-%\cleardoublepage\include{FrontBackmatter/Declaration}
+\bibliographystyle{plainnat}
+\label{app:bibliography}
+\bibliography{thesis}
 % ********************************************************************
 % Game Over: Restore, Restart, or Quit?
 %*******************************************************

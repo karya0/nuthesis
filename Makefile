@@ -7,7 +7,7 @@ FILE=thesis
 BIB_FILE=${FILE}.bib
 BIB_FILE=
 BIB_FILE=${wildcard *.bib}
-TEX_FILES=${wildcard *.tex} ${wildcard Chapters/*.tex} ${wildcard FrontBackMatter/*.tex}
+TEX_FILES=${wildcard *.tex} ${wildcard Chapters/*.tex}
 # POSTSCRIPT_FIGURES=*.ps *.eps *.png
 FIGURES_EPS  :=$(addsuffix .eps, $(basename $(POSTSCRIPT_FIGURES)))
 
@@ -166,7 +166,6 @@ distclean: clean
 	rm -f *.brf *.idx *.lof *.lot *.toc *.out *.bbl
 	rm -f *.aux
 	rm -f Chapters/*.aux
-	rm -f FrontBackMatter/*.aux
 
 dist: clean
 	( dir=`basename $$PWD`; cd ..; tar cvf $$dir.tar ./$$dir; \
