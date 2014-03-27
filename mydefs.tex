@@ -1,0 +1,172 @@
+%\renewcommand{\thesubfigure}{\thefigure.\arabic{subfigure}}
+
+\newcommand{\true}{\textbf{true}\xspace}
+\newcommand{\false}{\textbf{false}\xspace}
+
+\newcommand{\naive}{na\"{\i}ve\xspace}
+
+\newcommand{\SKIP}[1]{}
+\newcommand{\onec}[1]{\multicolumn{1}{c|}{#1}}
+\newcommand{\onecc}[1]{\multicolumn{1}{|c|}{#1}}
+
+\newcommand{\Bcompress}[0]{\textbf{\_201\_compress}\xspace}
+\newcommand{\Bjavac}[0]{\textbf{\_213\_javac}\xspace}
+\newcommand{\Bparaffins}[0]{\textbf{Paraffins23}\xspace}
+\newcommand{\Bpretzel}[0]{\textbf{Pretzel}\xspace}
+\newcommand{\Bscrambledict}[0]{\textbf{Scrambledict}\xspace}
+\newcommand{\Bjbb}[0]{\textbf{Pseudojbb}\xspace}
+
+
+%% uncomment one of the following two pair:
+%\newcommand{\proposalOnly}[1]{#1}
+%\newcommand{\thesisOnly}[1]{}
+%
+\newcommand{\propthesis}[2]{\ifthenelse{\boolean{thesis}}{#2}{#1}}
+
+\newcommand{\nth}[3]{$\frac{#1}{#2}^\mathrm{#3}$}
+
+%%% New types
+\newcommand{\template}{\textnormal{\texttt{tmpl}}}
+\newcommand{\code}{\textnormal{\texttt{code}}}
+
+%%% New ``register''
+\newcommand{\rcg}{\textnormal{\texttt{cg}}}
+\newcommand{\rsp}{\textnormal{\texttt{sp}}}
+
+%%% New pseudo instructions
+\newcommand{\ifallthru}{\textnormal{\texttt{fallthru}}}
+
+%%% Miscellaneous
+\newcommand{\iDelta}{\mathit{\Delta}}
+\newcommand{\iGamma}{\mathit{\Gamma}}
+\newcommand{\iPsi}{\mathit{\Psi}}
+\newcommand{\iPi}{\mathit{\Pi}}
+\newcommand{\iSigma}{\mathit{\Sigma}}
+\newcommand{\iTheta}{\mathit{\Theta}}
+\newcommand{\rtn}{\vdash_{\rm rtn}}
+\newcommand{\rsmrtn}{\vdash_{\rm rsmrtn}}
+
+
+\newcommand{\llangle}{\langle\!\langle}
+\newcommand{\rrangle}{\rangle\!\rangle}
+
+\newcommand{\tm}{\raisebox{.6ex}{\mbox{\tiny TM}}~}
+
+
+\def\fig#1#2#3#4#5{\begin{figure}[#5]\centerline
+{\epsfig{figure=#1,width=#2}}
+\caption{#4}\label{#3}\end{figure}}
+
+\def\figw#1#2#3#4#5{\begin{figure*}[#5]\centerline
+{\epsfig{figure=#1,width=#2}}
+\caption{#4}\label{#3}\end{figure*}}
+
+\newcommand{\set}[1]{\{{#1}\}}
+\newcommand{\dom}{\mathop{\mathrm{dom}}}
+
+\newcommand{\tightenlist}{\parskip=0pt\itemsep=0pt}
+
+%%
+%% Abbreviations
+%%
+
+%\newcommand{\inmediasres}{\emph{in medias res}}
+%\newcommand{\etal}{\emph{et~al.}}
+%\newcommand{\ie}{\emph{i.e.}}
+%\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\etal}{\mbox{et~al.}}
+\newcommand{\ie}{\mbox{i.e.}}
+\newcommand{\eg}{\mbox{e.g.}}
+
+
+%\newcommand{\carsecs}{car sections\xspace}
+%\newcommand{\Carsecs}{Car sections\xspace}
+
+%%
+%% Misc Utils
+%%
+
+\newcommand{\change}[1]{{\textsc{Make The Following Change:} \emph{#1}}}
+\newcommand{\checkthis}{\textsc{Check This}}
+\newcommand{\warning}[1]{{\Large \textbf{\emph{Warning:} #1}} \\}
+
+\newcommand{\todo}[1]{{\textsc{ToDo:} \emph{#1}}}
+\newcommand{\reference}{\textsc{[Reference]}}
+\newcommand{\citetodo}[1]{\textsc{[Reference:} \emph{#1}{\sc ]}}
+%\newcommand{\comment}[1]{{}}
+%\newcommand{\comment}[1]{\textbf{Comment:} \emph{#1}}
+\newcommand{\revisit}{\textsc{Revisit}}
+\newcommand{\spelling}{\textsc{Spelling!}}
+
+%% Chapter references
+
+\newcommand{\chref}[1]{chapter~\ref{ch:#1}}
+\newcommand{\Chref}[1]{Chapter~\ref{ch:#1}}
+
+\newcommand{\chrefs}[2]{chapters~\ref{ch:#1} and~\ref{ch:#2}}
+\newcommand{\Chrefs}[2]{Chapters~\ref{ch:#1} and~\ref{ch:#2}}
+
+\newcommand{\chrange}[2]{chapters~\ref{ch:#1} through~\ref{ch:#2}}
+\newcommand{\Chrange}[2]{Chapters~\ref{ch:#1} through~\ref{ch:#2}}
+
+%% Appendix references
+
+\newcommand{\apref}[1]{appendix~\ref{ap:#1}}
+\newcommand{\Apref}[1]{Appendix~\ref{ap:#1}}
+
+\newcommand{\aprefs}[2]{appendices~\ref{ap:#1} and~\ref{ap:#2}}
+\newcommand{\Aprefs}[2]{Appendices~\ref{ap:#1} and~\ref{ap:#2}}
+
+\newcommand{\aprange}[2]{appendices~\ref{ap:#1} through~\ref{ap:#2}}
+\newcommand{\Aprange}[2]{Appendices~\ref{ap:#1} through~\ref{ap:#2}}
+
+%% Section references
+
+\newcommand{\secref}[1]{section~\ref{sec:#1}}
+\newcommand{\Secref}[1]{Section~\ref{sec:#1}}
+
+\newcommand{\secrefs}[2]{sections~\ref{sec:#1} and~\ref{sec:#2}}
+\newcommand{\Secrefs}[2]{Sections~\ref{sec:#1} and~\ref{sec:#2}}
+
+\newcommand{\secrange}[2]{sections~\ref{sec:#1} to~\ref{sec:#2}}
+\newcommand{\Secrange}[2]{Sections~\ref{sec:#1} to~\ref{sec:#2}}
+
+\newcommand{\shortref}[1]{$\leadsto$\S\ref{sec:#1}}
+\newcommand{\shortrefs}[2]{$\leadsto$\S\ref{sec:#1} and \S\ref{sec:#2}}
+
+\newcommand{\appref}[1]{appendix~\ref{sec:#1}}
+\newcommand{\Appref}[1]{Appendix~\ref{sec:#1}}
+\newcommand{\apprefs}[2]{appendices~\ref{sec:#1} and~\ref{sec:#2}}
+\newcommand{\Apprefs}[2]{Appendices~\ref{sec:#1} and~\ref{sec:#2}}
+
+%% Table references
+
+\newcommand{\tabref}[1]{table~\ref{tab:#1}}
+\newcommand{\Tabref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\tabrefs}[2]{tables~\ref{tab:#1} and~\ref{tab:#2}}
+\newcommand{\Tabrefs}[2]{Tables~\ref{tab:#1} and~\ref{tab:#2}}
+
+\newcommand{\tabrange}[2]{tables~\ref{tab:#1}--\ref{tab:#2}}
+\newcommand{\Tabrange}[2]{Tables~\ref{tab:#1}--\ref{tab:#2}}
+
+%% Figure references
+
+\newcommand{\figref}[1]{figure~\ref{fig:#1}}
+\newcommand{\Figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\figrefs}[2]{figures~\ref{fig:#1} and~\ref{fig:#2}}
+\newcommand{\Figrefs}[2]{Figures~\ref{fig:#1} and~\ref{fig:#2}}
+\newcommand{\figsubref}[2]{figure~\ref{fig:#1}{\small (#2)}}
+\newcommand{\Figsubref}[2]{Figure~\ref{fig:#1}{\small (#2)}}
+
+\newcommand{\figrange}[2]{figures~\ref{fig:#1}--\ref{fig:#2}}
+\newcommand{\Figrange}[2]{Figures~\ref{fig:#1}--\ref{fig:#2}}
+
+%% Item references
+
+\newcommand{\itemref}[1]{item~\ref{item:#1}}
+\newcommand{\Itemref}[1]{Item~\ref{item:#1}}
+
+\newcommand{\wunits}[2]{\mbox{#1\,#2}}
+\newcommand{\FIXME}[1]{\texttt{FIXME: #1}}
+

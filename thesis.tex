@@ -1,0 +1,126 @@
+% Keep this before the document class to calculate stuff correctly
+%\RequirePackage{mathpazo}\normalfont % \mathit{\kappa} doesn't work
+\RequirePackage{charter}\normalfont
+
+% draft: Short title page, exact date-time of build, extra
+%        footer with date
+% final: official title page and footers
+%
+%\documentclass[12pt,draft]{memoir}
+\documentclass[12pt,final,oneside]{memoir}
+
+% Customization of memoir class to comply with dissertation guidelines
+\RequirePackage{dissertationfmt}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{cite} %sorts/compresses citations
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage{epstopdf}
+\usepackage{verbatim}
+%\usepackage[authoryear]{natbib}
+
+\input{mydefs}
+
+\title{Thesis Title Here}
+
+\author{Author}
+\makeindex
+
+\begin{document}
+
+%%% Front stuff
+\frontmatter
+
+% Cover page
+\makeccsthesistitle
+
+% \include{signature}
+
+
+%Uncomment the following line if you don't want numbererd Abstract and Ack.
+%\pagenumbering{gobble}
+
+\cleardoublepage\include{FrontBackmatter/Abstract}
+\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+
+% ToC, LoF, LoT, etc.
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\listoffigures
+%\listoftables
+
+%********************************************************************
+% Frontmatter
+%*******************************************************
+%\include{FrontBackmatter/DirtyTitlepage}
+%\include{FrontBackmatter/Titlepage}
+%\include{FrontBackmatter/Titleback}
+%\cleardoublepage\include{FrontBackmatter/Dedication}
+%\cleardoublepage\include{FrontBackmatter/Foreword}
+%\cleardoublepage\include{FrontBackmatter/Abstract}
+%\cleardoublepage\include{FrontBackmatter/Publication}
+%\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+%\pagestyle{scrheadings}
+%\cleardoublepage\include{FrontBackmatter/Contents}
+
+%********************************************************************
+% Mainmatter
+%*******************************************************
+%\pagenumbering{arabic}
+
+\mainmatter
+\chapter{Introduction}
+\label{ch:overview}
+\input{Chapters/intro.tex}
+
+\chapter{Related Work}
+\label{sec:relatedWork}
+\input{Chapters/relwork}
+
+\chapter{Super Geeky Stuff}
+\label{ch:core}
+\input{Chapters/core}
+
+\chapter{Evaluation}
+\label{sec:evaluation}
+\input{Chapters/eval}
+
+\chapter{Impact of this Thesis for the Future}
+\input{Chapters/impact}
+
+\chapter{Conclusion}
+\input{Chapters/conclusion}
+
+% ********************************************************************
+% Backmatter
+%*******************************************************
+\appendix
+\cleardoublepage
+\part{Appendix}
+%\input{challenges}
+%\input{Chapters/plugin-tutorial}
+%\input{Chapters/futureplugins}
+
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+\cleardoublepage\include{FrontBackmatter/Bibliography}
+%\cleardoublepage\include{FrontBackmatter/Colophon}
+%\cleardoublepage\include{FrontBackmatter/Declaration}
+% ********************************************************************
+% Game Over: Restore, Restart, or Quit?
+%*******************************************************
+\end{document}
+% ********************************************************************

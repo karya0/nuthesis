@@ -1,0 +1,118 @@
+\documentclass[12pt,oneside]{article}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{2in}
+
+
+
+% a macro for signature lines & dates
+\newcommand {\Sigline}[1] {\noindent \begin{minipage}{4in}
+    \rule {4 in} {0.4 pt} \\
+    \centering \emph{#1}
+  \end {minipage}
+  \hfill
+  \begin{minipage} {1.5 in}
+    \rule {1.5 in} {0.4 pt} \\
+    \centering \emph{Date}
+  \end{minipage}}
+
+% the gap between signature lines:
+\newcommand {\Gap}{\vspace{22pt}}
+
+% the gap between a signature line and a category title:
+\newcommand {\Smallgap}{\vspace {10pt}}
+
+\begin{document}
+
+\pagestyle {empty}
+
+\vskip -1cm
+
+% the first page is for the Library, I think.
+\begin{centering}
+  \bfseries
+  NORTHEASTERN UNIVERSITY \\
+  GRADUATE SCHOOL OF COMPUTER SCIENCE\\
+  Ph.D. THESIS APPROVAL FORM\\
+\end{centering}
+
+\vspace {2em}
+
+% the dissertation's information
+\noindent
+\begin{tabular}{ll}
+  \emph{THESIS TITLE}: & Thesis title \\
+  %& \hspace {1 em} continuation marks \\
+  & \\
+  \emph{AUTHOR}: & Author \\
+\end{tabular}
+
+\vspace {2 em}
+
+\noindent \emph{\small Ph.D. Thesis approved to complete all degree requirements for the Ph.D.\ degree in Computer Science}
+
+\Smallgap
+
+% the committee
+%\noindent \underline{Dissertation Committee}
+
+\Gap
+
+\Sigline {Thesis Advisor}
+
+\Gap
+
+\Sigline {Thesis Reader}
+
+\Gap
+
+\Sigline {Thesis Reader}
+
+\Gap
+
+\Sigline {Thesis Reader}
+
+\Gap
+
+\noindent \emph{GRADUATE SCHOOL APPROVAL}:
+
+\Gap
+
+\Sigline {Director, Graduate School}
+
+\Gap
+
+\noindent \emph{\uppercase{Original copy deposited in library}}:
+
+\Gap
+
+\Sigline {Reference Librarian}
+
+\Gap
+
+\noindent \emph{\uppercase{Copy received in graduate school office}}:
+
+\Gap
+
+\Sigline {Recipient's Signature}
+
+\Gap
+
+\hspace{-2em}
+\emph{
+\begin{tabular}{ll}
+  Distribution: & Original to Reference Library (Boxed- with signature approval sheet) \\
+                & One Copy to Thesis Advisor \\
+                & One Copy to Each Member of Thesis Committee \\
+                & One Copy to Director of Graduate School \\
+                & One Copy to Graduate School Office (with signature approval sheet) \\
+\end{tabular}
+}
+
+\Gap
+\noindent \emph {Copies submitted to those other than Reference Library should
+  be bound in a black hardcover binder with a squeeze back. (Available
+in N.U. Bookstore).}
+
+\end{document}
